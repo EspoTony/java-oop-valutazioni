@@ -10,6 +10,8 @@ public class Main {
 		
 		Random r = new Random();
 		
+		int studProm=0;
+		
 		for (int i=0; i<arrayStudente.length; i++) {
 			int assenze = r.nextInt(100);
 			float mediaVoti = (r.nextFloat() * 5);
@@ -17,7 +19,7 @@ public class Main {
 			
 			System.out.printf("Id: %2d Valutazione: ", (i+1) );
 			
-			int studProm=0;
+			
 			
 			if (arrayStudente[i].valutazione()) {
 				System.out.println("Promosso");
@@ -25,8 +27,9 @@ public class Main {
 			}else {
 				System.out.println("Bocciato");
 			}
-			System.out.println("in totale sono stati promossi " +studProm+" studenti");
+			
 		}
+		System.out.println("in totale sono stati promossi " +studProm+" studenti");
 	}
 
 }
