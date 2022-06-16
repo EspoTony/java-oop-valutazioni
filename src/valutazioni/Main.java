@@ -6,20 +6,20 @@ public class Main {
 	
 	public static void main (String[] args) {
 		
-		Valutazioni[] arrayValutazioni = new Valutazioni[20];
+		Studente[] arrayStudente = new Studente[20];
 		
 		Random r = new Random();
 		
-		for (int i=0; i<arrayValutazioni.length; i++) {
+		for (int i=0; i<arrayStudente.length; i++) {
 			int assenze = r.nextInt(100);
 			float mediaVoti = (r.nextFloat() * 5);
-			arrayValutazioni[i] = new Valutazioni(i+1, assenze, mediaVoti);
+			arrayStudente[i] = new Studente(i+1, assenze, mediaVoti);
 			
 			System.out.printf("Id: %2d Valutazione: ", (i+1) );
 			
 			int studProm=0;
 			
-			if (arrayValutazioni[i].Valutazione()) {
+			if (arrayStudente[i].valutazione()) {
 				System.out.println("Promosso");
 				studProm++;
 			}else {
